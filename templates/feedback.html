@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1 class="m-1" style="color:rgb(248, 82, 17)" >Review Us</h1> 
+
+<form method='post',action='/feedback'>
+{% csrf_token %}
+
+{% for message in messages %}
+<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+  <strong>{{message}}</strong> 
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+
+<div class="m-4 form-floating ">
+    <textarea class="form-control p-2" style="height: 21em; " name="review" placeholder="Leave a comment here" required id="floatingTextarea"></textarea>
+    
+  </div>
+  <button type="submit" class="btn btn-primary">Submit Review</button>
+</form>
+
+{% endblock body %}

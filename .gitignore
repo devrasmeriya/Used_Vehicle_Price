@@ -1,0 +1,4 @@
+echo .env > .gitignore
+.env
+auth.txt
+
