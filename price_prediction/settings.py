@@ -76,12 +76,12 @@ TEMPLATES = [
     },
 ]
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 WSGI_APPLICATION = 'price_prediction.wsgi.application'
 
@@ -91,17 +91,17 @@ password = str(os.getenv('password'))
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-"default": {
-    "ENGINE": "djongo",
-    "CLIENT": {
-        "host": "mongodb+srv://{name}:{password}@cluster0.ybhzi.mongodb.net/Users_Vehicle_Data?retryWrites=true&w=majority",
-        "username": name,
-        "password": password,
-        "name": "Users_Vehicle_Data",
-        "authMechanism": "SCRAM-SHA-1",
-    },
-}}
+# DATABASES = {
+# "default": {
+#     "ENGINE": "djongo",
+#     "CLIENT": {
+#         "host": "mongodb+srv://{name}:{password}@cluster0.ybhzi.mongodb.net/Users_Vehicle_Data?retryWrites=true&w=majority",
+#         "username": name,
+#         "password": password,
+#         "name": "Users_Vehicle_Data",
+#         "authMechanism": "SCRAM-SHA-1",
+#     },
+# }}
 
 
 # Password validation
