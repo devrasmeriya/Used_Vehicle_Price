@@ -1,1 +1,1 @@
-web: gunicorn price_prediction.wsgi 
+web: gunicorn app_price_prediction.wsgi 
